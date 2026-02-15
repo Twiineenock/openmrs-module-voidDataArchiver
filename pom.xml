@@ -199,6 +199,10 @@
 	</pluginRepositories>
 
 	<properties>
-		<openmrsPlatformVersion>1.11.6</openmrsPlatformVersion>
+		<openmrsPlatformVersion>2.3.0</openmrsPlatformVersion>
+		<!-- <uiframeworkVersion>3.8</uiframeworkVersion>
+		<appuiVersion>1.7</appuiVersion>
+		<uicommonsModuleVersion>1.7</uicommonsModuleVersion>
+		<appframeworkVersion>2.9</appframeworkVersion> -->
 	</properties>
 </project>

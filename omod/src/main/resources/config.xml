@@ -19,7 +19,7 @@
 	
 	<require_version>${openmrsPlatformVersion}</require_version>
 
-	<require_modules>
+	<!-- <require_modules>
 		<require_module version="${appframeworkVersion}">
 			org.openmrs.module.appframework
 		</require_module>
@@ -32,7 +32,14 @@
 		<require_module version="${appuiVersion}">
 			org.openmrs.module.appui
 		</require_module>
+	</require_modules> -->
+
+	<require_modules>
+		<require_module version="1.4.0">
+			org.openmrs.module.legacyui
+		</require_module>
 	</require_modules>
+
 	
 	<!-- Extensions -->
 	<extension>

@@ -1,11 +1,13 @@
-<%@ include file="/WEB-INF/template/include.jsp"%>
+<%@ include file="/WEB-INF/template/include.jsp" %>
 
-<%@ include file="/WEB-INF/template/header.jsp"%>
+  <%@ include file="/WEB-INF/template/header.jsp" %>
 
-<h2><spring:message code="voiddataarchiver-omod.title" /></h2>
+    <h2>
+      <spring:message code="voiddataarchiver-omod.title" />
+    </h2>
 
-<br/>
-<table>
+    <br />
+    <!-- <table>
   <tr>
    <th>User Id</th>
    <th>Username</th>
@@ -16,6 +18,12 @@
         <td>${user.systemId}</td>
       </tr>		
   </c:forEach>
-</table>
+</table> -->
 
-<%@ include file="/WEB-INF/template/footer.jsp"%>
+    <div class="box">
+      <p>
+        <spring:message code="voiddataarchiver-omod.description" />
+      </p>
+    </div>
+
+    <%@ include file="/WEB-INF/template/footer.jsp" %>
