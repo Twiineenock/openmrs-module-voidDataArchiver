@@ -9,6 +9,8 @@
  */
 package org.openmrs.module.voiddataarchiver.api.impl;
 
+import java.util.List;
+
 import org.openmrs.api.APIException;
 import org.openmrs.api.UserService;
 import org.openmrs.api.impl.BaseOpenmrsService;
@@ -48,5 +50,10 @@ public class VoidDataArchiverServiceImpl extends BaseOpenmrsService implements V
 		}
 		
 		return dao.saveItem(item);
+	}
+	
+	@Override
+	public List<String> getVoidedTableNames() throws APIException {
+		return dao.getVoidedTableNames();
 	}
 }

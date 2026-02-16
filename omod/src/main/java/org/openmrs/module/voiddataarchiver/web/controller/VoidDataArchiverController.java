@@ -15,9 +15,8 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.openmrs.User;
-import org.openmrs.api.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.openmrs.api.context.Context;
+import org.openmrs.module.voiddataarchiver.api.VoidDataArchiverService;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -34,9 +33,6 @@ public class VoidDataArchiverController {
 	
 	/** Logger for this class and subclasses */
 	protected final Log log = LogFactory.getLog(getClass());
-	
-	@Autowired
-	UserService userService;
 	
 	/** Success form view name */
 	private final String VIEW = "/module/voiddataarchiver/voiddataarchiver";
@@ -75,13 +71,11 @@ public class VoidDataArchiverController {
 	 * pojo. The bean name defined in the ModelAttribute annotation and the type can be just defined
 	 * by the return type of this method
 	 */
-	@ModelAttribute("users")
-	protected List<User> getUsers() throws Exception {
-		List<User> users = userService.getAllUsers();
+	@ModelAttribute("voidedTables")
+	protected List<String> getVoidedTables() throws Exception {
+		List<String> voidedTables = Context.getService(VoidDataArchiverService.class).getVoidedTableNames();
 		
-		// this object will be made available to the jsp page under the variable name
-		// that is defined in the @ModuleAttribute tag
-		return users;
+		return voidedTables;
 	}
 	
 }

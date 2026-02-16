@@ -9,6 +9,8 @@
  */
 package org.openmrs.module.voiddataarchiver.api;
 
+import java.util.List;
+
 import org.openmrs.annotation.Authorized;
 import org.openmrs.api.APIException;
 import org.openmrs.api.OpenmrsService;
@@ -45,4 +47,14 @@ public interface VoidDataArchiverService extends OpenmrsService {
 	@Authorized(VoidDataArchiverConfig.MODULE_PRIVILEGE)
 	@Transactional
 	Item saveItem(Item item) throws APIException;
+	
+	/**
+	 * Gets a list of names of tables (or entities) that contain voided data.
+	 * 
+	 * @return list of table/entity names
+	 * @throws APIException
+	 */
+	@Authorized(VoidDataArchiverConfig.MODULE_PRIVILEGE)
+	@Transactional(readOnly = true)
+	List<String> getVoidedTableNames() throws APIException;
 }

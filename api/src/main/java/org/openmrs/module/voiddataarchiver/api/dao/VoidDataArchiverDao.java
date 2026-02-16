@@ -9,29 +9,29 @@
  */
 package org.openmrs.module.voiddataarchiver.api.dao;
 
-import org.hibernate.criterion.Restrictions;
-import org.openmrs.api.db.hibernate.DbSession;
-import org.openmrs.api.db.hibernate.DbSessionFactory;
-import org.openmrs.module.voiddataarchiver.Item;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import java.util.List;
 
-@Repository("voiddataarchiver.VoidDataArchiverDao")
-public class VoidDataArchiverDao {
+import org.openmrs.module.voiddataarchiver.Item;
+
+/**
+ * Database access for VoidDataArchiver
+ */
+public interface VoidDataArchiverDao {
 	
-	@Autowired
-	DbSessionFactory sessionFactory;
+	/**
+	 * @return item with given uuid
+	 */
+	Item getItemByUuid(String uuid);
 	
-	private DbSession getSession() {
-		return sessionFactory.getCurrentSession();
-	}
+	/**
+	 * @return saved item
+	 */
+	Item saveItem(Item item);
 	
-	public Item getItemByUuid(String uuid) {
-		return (Item) getSession().createCriteria(Item.class).add(Restrictions.eq("uuid", uuid)).uniqueResult();
-	}
-	
-	public Item saveItem(Item item) {
-		getSession().saveOrUpdate(item);
-		return item;
-	}
+	/**
+	 * Gets a list of names of tables (or entities) that contain voided data.
+	 * 
+	 * @return list of table/entity names
+	 */
+	List<String> getVoidedTableNames();
 }

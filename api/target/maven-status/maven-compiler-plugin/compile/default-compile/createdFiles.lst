@@ -1,4 +1,5 @@
 org/openmrs/module/voiddataarchiver/VoidDataArchiverActivator.class
+org/openmrs/module/voiddataarchiver/api/db/hibernate/HibernateVoidDataArchiverDao.class
 org/openmrs/module/voiddataarchiver/Item.class
 org/openmrs/module/voiddataarchiver/api/VoidDataArchiverService.class
 org/openmrs/module/voiddataarchiver/VoidDataArchiverConfig.class

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.openmrs.module.voiddataarchiver.api.dao.VoidDataArchiverDaoTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.148 s -- in org.openmrs.module.voiddataarchiver.api.dao.VoidDataArchiverDaoTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.187 s -- in org.openmrs.module.voiddataarchiver.api.dao.VoidDataArchiverDaoTest
