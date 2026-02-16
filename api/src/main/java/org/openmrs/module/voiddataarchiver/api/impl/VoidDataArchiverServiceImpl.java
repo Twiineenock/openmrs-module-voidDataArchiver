@@ -14,7 +14,8 @@ import java.util.List;
 import org.openmrs.api.APIException;
 import org.openmrs.api.UserService;
 import org.openmrs.api.impl.BaseOpenmrsService;
-import org.openmrs.module.voiddataarchiver.Item;
+
+import org.openmrs.module.voiddataarchiver.TableInfo;
 import org.openmrs.module.voiddataarchiver.api.VoidDataArchiverService;
 import org.openmrs.module.voiddataarchiver.api.dao.VoidDataArchiverDao;
 
@@ -39,21 +40,7 @@ public class VoidDataArchiverServiceImpl extends BaseOpenmrsService implements V
 	}
 	
 	@Override
-	public Item getItemByUuid(String uuid) throws APIException {
-		return dao.getItemByUuid(uuid);
-	}
-	
-	@Override
-	public Item saveItem(Item item) throws APIException {
-		if (item.getOwner() == null) {
-			item.setOwner(userService.getUser(1));
-		}
-		
-		return dao.saveItem(item);
-	}
-	
-	@Override
-	public List<String> getVoidedTableNames() throws APIException {
-		return dao.getVoidedTableNames();
+	public List<TableInfo> getAllTableInfo() throws APIException {
+		return dao.getAllTableInfo();
 	}
 }

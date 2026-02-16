@@ -11,7 +11,7 @@ package org.openmrs.module.voiddataarchiver.api.dao;
 
 import java.util.List;
 
-import org.openmrs.module.voiddataarchiver.Item;
+import org.openmrs.module.voiddataarchiver.TableInfo;
 
 /**
  * Database access for VoidDataArchiver
@@ -19,19 +19,10 @@ import org.openmrs.module.voiddataarchiver.Item;
 public interface VoidDataArchiverDao {
 	
 	/**
-	 * @return item with given uuid
-	 */
-	Item getItemByUuid(String uuid);
-	
-	/**
-	 * @return saved item
-	 */
-	Item saveItem(Item item);
-	
-	/**
-	 * Gets a list of names of tables (or entities) that contain voided data.
+	 * Gets a list of information about all tables, including voided data counts for voidable
+	 * tables.
 	 * 
-	 * @return list of table/entity names
+	 * @return list of TableInfo objects
 	 */
-	List<String> getVoidedTableNames();
+	List<TableInfo> getAllTableInfo();
 }

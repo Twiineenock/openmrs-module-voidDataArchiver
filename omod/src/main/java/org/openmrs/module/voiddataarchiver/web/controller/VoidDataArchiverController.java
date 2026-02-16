@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openmrs.api.context.Context;
+import org.openmrs.module.voiddataarchiver.TableInfo;
 import org.openmrs.module.voiddataarchiver.api.VoidDataArchiverService;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -66,16 +67,38 @@ public class VoidDataArchiverController {
 		return VIEW;
 	}
 	
-	/**
-	 * This class returns the form backing object. This can be a string, a boolean, or a normal java
-	 * pojo. The bean name defined in the ModelAttribute annotation and the type can be just defined
-	 * by the return type of this method
-	 */
-	@ModelAttribute("voidedTables")
-	protected List<String> getVoidedTables() throws Exception {
-		List<String> voidedTables = Context.getService(VoidDataArchiverService.class).getVoidedTableNames();
+	@ModelAttribute("nonVoidableTables")
+	protected List<TableInfo> getNonVoidableTables() throws Exception {
+		return getFilteredTables(false, null);
+	}
+	
+	@ModelAttribute("voidableCleanTables")
+	protected List<TableInfo> getVoidableCleanTables() throws Exception {
+		return getFilteredTables(true, false);
+	}
+	
+	@ModelAttribute("voidableDataTables")
+	protected List<TableInfo> getVoidableDataTables() throws Exception {
+		return getFilteredTables(true, true);
+	}
+	
+	private List<TableInfo> getFilteredTables(boolean isVoidable, Boolean hasVoidedData) {
+		List<TableInfo> allTables = Context.getService(VoidDataArchiverService.class).getAllTableInfo();
+		List<TableInfo> filtered = new java.util.ArrayList<TableInfo>();
 		
-		return voidedTables;
+		for (TableInfo info : allTables) {
+			if (info.isVoidable() == isVoidable) {
+				if (hasVoidedData == null) {
+					filtered.add(info);
+				} else {
+					boolean hasData = info.getVoidedRecords() != null && info.getVoidedRecords() > 0;
+					if (hasVoidedData == hasData) {
+						filtered.add(info);
+					}
+				}
+			}
+		}
+		return filtered;
 	}
 	
 }

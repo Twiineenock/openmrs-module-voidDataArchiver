@@ -1,0 +1,163 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for org.openmrs.module:voiddataarchiver-api:jar:1.0.0-SNAPSHOT
+[[1;33mWARNING[m] 'dependencyManagement.dependencies.dependency.scope' for org.openmrs.module:dataexchange-omod:jar:tests must be one of [provided, compile, runtime, test, system, import] but is 'tests'. @ org.openmrs.distro:referenceapplication:2.4, /home/hallo/.m2/repository/org/openmrs/distro/referenceapplication/2.4/referenceapplication-2.4.pom, line 814, column 12
+[[1;33mWARNING[m] 'dependencyManagement.dependencies.dependency.scope' for org.openmrs.module:allergyui-api:jar:tests must be one of [provided, compile, runtime, test, system, import] but is 'tests'. @ org.openmrs.distro:referenceapplication:2.4, /home/hallo/.m2/repository/org/openmrs/distro/referenceapplication/2.4/referenceapplication-2.4.pom, line 848, column 12
+[[1;33mWARNING[m] 'dependencyManagement.dependencies.dependency.scope' for org.openmrs.module:formentryapp-api:jar:tests must be one of [provided, compile, runtime, test, system, import] but is 'tests'. @ org.openmrs.distro:referenceapplication:2.4, /home/hallo/.m2/repository/org/openmrs/distro/referenceapplication/2.4/referenceapplication-2.4.pom, line 868, column 12
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for org.openmrs.module:voiddataarchiver-omod:jar:1.0.0-SNAPSHOT
+[[1;33mWARNING[m] 'dependencyManagement.dependencies.dependency.scope' for org.openmrs.module:dataexchange-omod:jar:tests must be one of [provided, compile, runtime, test, system, import] but is 'tests'. @ org.openmrs.distro:referenceapplication:2.4, /home/hallo/.m2/repository/org/openmrs/distro/referenceapplication/2.4/referenceapplication-2.4.pom, line 814, column 12
+[[1;33mWARNING[m] 'dependencyManagement.dependencies.dependency.scope' for org.openmrs.module:allergyui-api:jar:tests must be one of [provided, compile, runtime, test, system, import] but is 'tests'. @ org.openmrs.distro:referenceapplication:2.4, /home/hallo/.m2/repository/org/openmrs/distro/referenceapplication/2.4/referenceapplication-2.4.pom, line 848, column 12
+[[1;33mWARNING[m] 'dependencyManagement.dependencies.dependency.scope' for org.openmrs.module:formentryapp-api:jar:tests must be one of [provided, compile, runtime, test, system, import] but is 'tests'. @ org.openmrs.distro:referenceapplication:2.4, /home/hallo/.m2/repository/org/openmrs/distro/referenceapplication/2.4/referenceapplication-2.4.pom, line 868, column 12
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for org.openmrs.module:voiddataarchiver:pom:1.0.0-SNAPSHOT
+[[1;33mWARNING[m] 'dependencyManagement.dependencies.dependency.scope' for org.openmrs.module:dataexchange-omod:jar:tests must be one of [provided, compile, runtime, test, system, import] but is 'tests'. @ org.openmrs.distro:referenceapplication:2.4, /home/hallo/.m2/repository/org/openmrs/distro/referenceapplication/2.4/referenceapplication-2.4.pom, line 814, column 12
+[[1;33mWARNING[m] 'dependencyManagement.dependencies.dependency.scope' for org.openmrs.module:allergyui-api:jar:tests must be one of [provided, compile, runtime, test, system, import] but is 'tests'. @ org.openmrs.distro:referenceapplication:2.4, /home/hallo/.m2/repository/org/openmrs/distro/referenceapplication/2.4/referenceapplication-2.4.pom, line 848, column 12
+[[1;33mWARNING[m] 'dependencyManagement.dependencies.dependency.scope' for org.openmrs.module:formentryapp-api:jar:tests must be one of [provided, compile, runtime, test, system, import] but is 'tests'. @ org.openmrs.distro:referenceapplication:2.4, /home/hallo/.m2/repository/org/openmrs/distro/referenceapplication/2.4/referenceapplication-2.4.pom, line 868, column 12
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Build Order:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] VoidData Archiver                                                  [pom]
+[[1;34mINFO[m] VoidData Archiver API                                              [jar]
+[[1;34mINFO[m] VoidData Archiver OMOD                                             [jar]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36morg.openmrs.module:voiddataarchiver[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding VoidData Archiver 1.0.0-SNAPSHOT                          [1/3][m
+[[1;34mINFO[m]   from pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mclean:3.2.0:clean[m [1m(default-clean)[m @ [36mvoiddataarchiver[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuildnumber:1.1:create[m [1m(default)[m @ [36mvoiddataarchiver[0;1m ---[m
+[[1;34mINFO[m] Checking for local modifications: skipped.
+[[1;34mINFO[m] Updating project files from SCM: skipped.
+[[1;34mINFO[m] ShortRevision tag detected. The value is '6'.
+[[1;34mINFO[m] Executing: /bin/sh -c cd /home/hallo/gsoc2026/voiddataarchiver && git rev-parse --verify --short=6 HEAD
+[[1;34mINFO[m] Working directory: /home/hallo/gsoc2026/voiddataarchiver
+[[1;34mINFO[m] Storing buildNumber: 9ffc3c at timestamp: 1771231432489
+[[1;34mINFO[m] ShortRevision tag detected. The value is '6'.
+[[1;34mINFO[m] Executing: /bin/sh -c cd /home/hallo/gsoc2026/voiddataarchiver && git rev-parse --verify --short=6 HEAD
+[[1;34mINFO[m] Working directory: /home/hallo/gsoc2026/voiddataarchiver
+[[1;34mINFO[m] Storing buildScmBranch: UNKNOWN
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjava-formatter:0.4:format[m [1m(default)[m @ [36mvoiddataarchiver[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to format source files.
+[[1;34mINFO[m] Number of files to be formatted: 0
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32minstall:3.1.2:install[m [1m(default-install)[m @ [36mvoiddataarchiver[0;1m ---[m
+[[1;34mINFO[m] Installing /home/hallo/gsoc2026/voiddataarchiver/pom.xml to /home/hallo/.m2/repository/org/openmrs/module/voiddataarchiver/1.0.0-SNAPSHOT/voiddataarchiver-1.0.0-SNAPSHOT.pom
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------< [0;36morg.openmrs.module:voiddataarchiver-api[0;1m >---------------[m
+[[1;34mINFO[m] [1mBuilding VoidData Archiver API 1.0.0-SNAPSHOT                      [2/3][m
+[[1;34mINFO[m]   from api/pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] 1 problem was encountered while building the effective model for org.javassist:javassist:jar:3.18.1-GA during dependency collection step for project (use -X to see details)
+[[1;33mWARNING[m] 1 problem was encountered while building the effective model for org.javassist:javassist:jar:3.17.1-GA during dependency collection step for project (use -X to see details)
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mclean:3.2.0:clean[m [1m(default-clean)[m @ [36mvoiddataarchiver-api[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/hallo/gsoc2026/voiddataarchiver/api/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuildnumber:1.1:create[m [1m(default)[m @ [36mvoiddataarchiver-api[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjava-formatter:0.4:format[m [1m(default)[m @ [36mvoiddataarchiver-api[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to format source files.
+[[1;34mINFO[m] Number of files to be formatted: 9
+[[1;34mINFO[m] Successfully formatted: 6 file(s)
+[[1;34mINFO[m] Fail to format        : 0 file(s)
+[[1;34mINFO[m] Skipped               : 3 file(s)
+[[1;34mINFO[m] Approximate time taken: 0s
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mresources:3.1.0:resources[m [1m(default-resources)[m @ [36mvoiddataarchiver-api[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 5 resources
+[[1;34mINFO[m] Copying 0 resource
+[[1;34mINFO[m] skip non existing resourceDirectory /home/hallo/gsoc2026/voiddataarchiver/api/src/main/webapp
+[[1;34mINFO[m] skip non existing resourceDirectory /home/hallo/gsoc2026/voiddataarchiver/api/src/main/webapp
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcompiler:3.8.1:compile[m [1m(default-compile)[m @ [36mvoiddataarchiver-api[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 8 source files to /home/hallo/gsoc2026/voiddataarchiver/api/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mresources:3.1.0:testResources[m [1m(default-testResources)[m @ [36mvoiddataarchiver-api[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/hallo/gsoc2026/voiddataarchiver/api/src/test/resources
+[[1;34mINFO[m] skip non existing resourceDirectory /home/hallo/gsoc2026/voiddataarchiver/api/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcompiler:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mvoiddataarchiver-api[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /home/hallo/gsoc2026/voiddataarchiver/api/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32msurefire:3.1.2:test[m [1m(default-test)[m @ [36mvoiddataarchiver-api[0;1m ---[m
+[[1;34mINFO[m] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.openmrs.module.voiddataarchiver.dao.[1mVoidDataArchiverDaoTest[m
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m1[m, Failures: 0, [1;31mErrors: [0;1;31m1[m, Skipped: 0, Time elapsed: 0.145 s[1;31m <<< FAILURE![m -- in org.openmrs.module.voiddataarchiver.dao.[1mVoidDataArchiverDaoTest[m
+[[1;31mERROR[m] org.openmrs.module.voiddataarchiver.dao.VoidDataArchiverDaoTest.initializationError -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.Exception: No runnable methods
+	at org.junit.runners.BlockJUnit4ClassRunner.validateInstanceMethods(BlockJUnit4ClassRunner.java:169)
+	at org.junit.runners.BlockJUnit4ClassRunner.collectInitializationErrors(BlockJUnit4ClassRunner.java:104)
+	at org.junit.runners.ParentRunner.validate(ParentRunner.java:355)
+	at org.junit.runners.ParentRunner.<init>(ParentRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.<init>(BlockJUnit4ClassRunner.java:57)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.<init>(SpringJUnit4ClassRunner.java:111)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.junit.internal.builders.AnnotatedBuilder.buildRunner(AnnotatedBuilder.java:29)
+	at org.junit.internal.builders.AnnotatedBuilder.runnerForClass(AnnotatedBuilder.java:21)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
+	at org.junit.internal.requests.ClassRequest.getRunner(ClassRequest.java:26)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:314)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mErrors: [m
+[[1;31mERROR[m] [1;31m  VoidDataArchiverDaoTest.initializationError »  No runnable methods[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 1, Failures: 0, Errors: 1, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1mReactor Summary for VoidData Archiver 1.0.0-SNAPSHOT:[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] VoidData Archiver .................................. [1;32mSUCCESS[m [  0.363 s]
+[[1;34mINFO[m] VoidData Archiver API .............................. [1;31mFAILURE[m [  2.413 s]
+[[1;34mINFO[m] VoidData Archiver OMOD ............................. [1;33mSKIPPED[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  3.014 s
+[[1;34mINFO[m] Finished at: 2026-02-16T11:43:55+03:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:3.1.2:test[m [1m(default-test)[m on project [36mvoiddataarchiver-api[m: [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /home/hallo/gsoc2026/voiddataarchiver/api/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] [1;31mPlease refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[[1;31mERROR[m] 
+[[1;31mERROR[m] After correcting the problems, you can resume the build with the command
+[[1;31mERROR[m]   [1mmvn <args> -rf :voiddataarchiver-api[m

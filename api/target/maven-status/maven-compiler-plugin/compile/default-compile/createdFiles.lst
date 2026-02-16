@@ -1,7 +1,9 @@
-org/openmrs/module/voiddataarchiver/VoidDataArchiverActivator.class
 org/openmrs/module/voiddataarchiver/api/db/hibernate/HibernateVoidDataArchiverDao.class
+org/openmrs/module/voiddataarchiver/api/dao/VoidDataArchiverDao.class
+org/openmrs/module/voiddataarchiver/VoidDataArchiverActivator.class
 org/openmrs/module/voiddataarchiver/Item.class
+org/openmrs/module/voiddataarchiver/TableInfo.class
 org/openmrs/module/voiddataarchiver/api/VoidDataArchiverService.class
 org/openmrs/module/voiddataarchiver/VoidDataArchiverConfig.class
-org/openmrs/module/voiddataarchiver/api/dao/VoidDataArchiverDao.class
+org/openmrs/module/voiddataarchiver/api/db/hibernate/HibernateVoidDataArchiverDao$1.class
 org/openmrs/module/voiddataarchiver/api/impl/VoidDataArchiverServiceImpl.class

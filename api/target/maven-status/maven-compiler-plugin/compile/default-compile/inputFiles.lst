@@ -1,5 +1,6 @@
 /home/hallo/gsoc2026/voiddataarchiver/api/src/main/java/org/openmrs/module/voiddataarchiver/VoidDataArchiverConfig.java
 /home/hallo/gsoc2026/voiddataarchiver/api/src/main/java/org/openmrs/module/voiddataarchiver/VoidDataArchiverActivator.java
+/home/hallo/gsoc2026/voiddataarchiver/api/src/main/java/org/openmrs/module/voiddataarchiver/TableInfo.java
 /home/hallo/gsoc2026/voiddataarchiver/api/src/main/java/org/openmrs/module/voiddataarchiver/api/dao/VoidDataArchiverDao.java
 /home/hallo/gsoc2026/voiddataarchiver/api/src/main/java/org/openmrs/module/voiddataarchiver/Item.java
 /home/hallo/gsoc2026/voiddataarchiver/api/src/main/java/org/openmrs/module/voiddataarchiver/api/db/hibernate/HibernateVoidDataArchiverDao.java
