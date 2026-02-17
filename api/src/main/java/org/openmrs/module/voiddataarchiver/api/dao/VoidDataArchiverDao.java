@@ -11,7 +11,7 @@ package org.openmrs.module.voiddataarchiver.api.dao;
 
 import java.util.List;
 
-import org.openmrs.module.voiddataarchiver.TableInfo;
+import org.openmrs.module.voiddataarchiver.api.TableInfo;
 
 /**
  * Database access for VoidDataArchiver
@@ -25,4 +25,49 @@ public interface VoidDataArchiverDao {
 	 * @return list of TableInfo objects
 	 */
 	List<TableInfo> getAllTableInfo();
+	
+	/**
+	 * Creates (if invalid/missing) the archive table for the given source table. Also performs
+	 * schema sync if the table exists but is missing columns.
+	 * 
+	 * @param tableName the name of the source table (e.g. "visit")
+	 */
+	void createArchiveTable(String tableName);
+	
+	/**
+	 * Moves a batch of voided rows from source to archive.
+	 * 
+	 * @param tableName the name of the source table
+	 * @param limit batch size (e.g. 1000)
+	 * @return number of rows moved
+	 */
+	int archiveBatch(String tableName, int limit);
+	
+	/**
+	 * Retrieves the foreign key relationships between tables.
+	 * 
+	 * @return Map where Key = Child Table, Value = List of Parent Tables
+	 */
+	java.util.Map<String, List<String>> getTableDependencies();
+	
+	/**
+	 * Gets a list of all archived tables (tables starting with 'archive_').
+	 * 
+	 * @return list of TableInfo objects representing archived tables
+	 */
+	List<TableInfo> getArchivedTables();
+	
+	/**
+	 * Restores data from the archive table back to the source table.
+	 * 
+	 * @param tableName the name of the source table (e.g. "visit")
+	 */
+	void restoreTable(String tableName);
+	
+	/**
+	 * Drops the specified table. Use with caution!
+	 * 
+	 * @param tableName the name of the table to drop
+	 */
+	void dropArchiveTable(String tableName);
 }

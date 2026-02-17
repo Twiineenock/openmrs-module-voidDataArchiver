@@ -1,4 +1,4 @@
-package org.openmrs.module.voiddataarchiver;
+package org.openmrs.module.voiddataarchiver.api;
 
 /**
  * Holds information about a database table/entity.
@@ -71,5 +71,14 @@ public class TableInfo {
 	
 	public void setPrettyName(String prettyName) {
 		this.prettyName = prettyName;
+	}
+	
+	/**
+	 * Returns the number of non-voided (live) records: totalRecords - voidedRecords.
+	 */
+	public Long getLiveRecords() {
+		long total = (totalRecords != null) ? totalRecords : 0L;
+		long voided = (voidedRecords != null) ? voidedRecords : 0L;
+		return total - voided;
 	}
 }

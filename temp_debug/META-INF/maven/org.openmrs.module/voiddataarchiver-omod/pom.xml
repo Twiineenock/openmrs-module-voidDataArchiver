@@ -1,0 +1,116 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.openmrs.module</groupId>
+		<artifactId>voiddataarchiver</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>voiddataarchiver-omod</artifactId>
+	<packaging>jar</packaging>
+	<name>VoidData Archiver OMOD</name>
+	<description>Omod submodule for VoidData Archiver</description>
+
+	<!-- <dependencies>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>voiddataarchiver-api</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+		<dependency>
+			<groupId>org.openmrs.web</groupId>
+			<artifactId>openmrs-web</artifactId>
+            <scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.openmrs.web</groupId>
+			<artifactId>openmrs-web</artifactId>
+			<scope>provided</scope>
+			<classifier>tests</classifier>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>uiframework-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies> -->
+		<dependencies>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>voiddataarchiver-api</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+		<dependency>
+			<groupId>org.openmrs.web</groupId>
+			<artifactId>openmrs-web</artifactId>
+            <scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.openmrs.web</groupId>
+			<artifactId>openmrs-web</artifactId>
+			<scope>provided</scope>
+			<classifier>tests</classifier>
+		</dependency>
+
+        <!-- Added Legacy UI Dependency -->
+        <dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>legacyui-omod</artifactId>
+			<version>1.8.1</version>
+			<scope>provided</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.openmrs.module</groupId>
+					<artifactId>uiframework-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.openmrs.module</groupId>
+					<artifactId>uiframework-omod</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.openmrs.module</groupId>
+					<artifactId>uicommons-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.openmrs.module</groupId>
+					<artifactId>uicommons-omod</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.openmrs.module</groupId>
+					<artifactId>appframework-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.openmrs.module</groupId>
+					<artifactId>appframework-omod</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.openmrs.module</groupId>
+					<artifactId>appui-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.openmrs.module</groupId>
+					<artifactId>appui-omod</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+
+	<build>
+		<finalName>${project.parent.artifactId}-${project.parent.version}</finalName>
+
+		<plugins>
+			<plugin>
+				<groupId>org.openmrs.maven.plugins</groupId>
+				<artifactId>maven-openmrs-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

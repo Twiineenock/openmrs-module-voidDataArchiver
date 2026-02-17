@@ -11,12 +11,7 @@ package org.openmrs.module.voiddataarchiver.api;
 
 import java.util.List;
 
-import org.openmrs.annotation.Authorized;
-import org.openmrs.api.APIException;
 import org.openmrs.api.OpenmrsService;
-
-import org.openmrs.module.voiddataarchiver.TableInfo;
-import org.openmrs.module.voiddataarchiver.VoidDataArchiverConfig;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -42,4 +37,40 @@ public interface VoidDataArchiverService extends OpenmrsService {
 	 */
 	@Transactional(readOnly = true)
 	List<TableInfo> getAllTableInfo();
+	
+	/**
+	 * Archives voided data for the specified table (and its hierarchy based on dependencies). If
+	 * tableName is null, archives ALL voided data in the system.
+	 * 
+	 * @param tableName the name of the table to archive, or null for global archive.
+	 */
+	@Transactional
+	void runArchival(String tableName);
+	
+	/**
+	 * Gets a list of all archived tables.
+	 * 
+	 * @return list of TableInfo objects
+	 */
+	@Transactional(readOnly = true)
+	List<TableInfo> getArchivedTables();
+	
+	/**
+	 * Restores an archived table to its original state.
+	 * 
+	 * @param tableName the name of the source table (e.g. "visit")
+	 */
+	@Transactional
+	void restoreTable(String tableName);
+	
+	/**
+	 * Drops an archive table.
+	 * 
+	 * @param tableName the name of the archive table to drop (e.g. "archive_visit")
+	 */
+	@Transactional
+	void dropArchiveTable(String tableName);
+	
+	@Transactional(readOnly = true)
+	java.util.Map<String, List<String>> getTableDependencies();
 }
